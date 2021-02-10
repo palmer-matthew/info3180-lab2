@@ -27,14 +27,14 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Matthew Palmer")
 
 @app.route('/profile')
 def profile():
     info = {
         'date': [2021, 2, 9],
         'name': 'Matthew Palmer',
-        'locate': 'Kingston, Ja',
+        'locate': 'Kingston, Jamaica',
         'tag': '@m-apalm',
         'bio': 'This is a simple paragraph about me. I am a second year Computing student majoring in Computer Science. \
         I am interesed in alot of things as my interests invlove music, coding , reading and gaining knowledge plus more. \
