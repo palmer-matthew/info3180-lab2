@@ -2,16 +2,16 @@
 
 {% block main %}
 <section class="card">
-    <section>
+    <section class="top"> 
         <!-- <img src="" alt="" /> -->
         <h3>{{ name }}</h3>
         <p>{{ tag }}</p>
         <p>{{ location }}</p>
         <p>{{ date }}</p>
     </section>
-    <section>
+    <section class="bottom">
         <p>{{ bio }}</p>
-        <section>
+        <section class="follow_line">
             {% for key,value in lst.items() %}
                 <div>
                     <span>{{ value }}</span>
@@ -19,7 +19,7 @@
                 </div>
             {% endfor %}
         </section>
-        <button>Follow</button>
+        <button class = "follow">Follow</button>
     </section>
 </section>
 {% endblock %}

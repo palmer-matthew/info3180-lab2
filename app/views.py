@@ -7,7 +7,12 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+from datetime import date
+## Auxilliary Functions
 
+def format_date_joined(joined):
+    date_joined = date(joined[0], joined[1], joined[2])
+    return date_joined.strftime("%B, %Y")
 
 ###
 # Routing for your application.
@@ -27,6 +32,7 @@ def about():
 @app.route('/profile')
 def profile():
     info = {
+        'date': [2021, 2, 9],
         'name': 'Matthew Palmer',
         'locate': 'Kingston, Ja',
         'tag': '@m-apalm',
@@ -36,6 +42,7 @@ def profile():
         aspects of Computing such as Web Development.',
         'lst': { 'Posts': 7, 'Following': 100, 'Followers': 250 },
     }
+
     return render_template(
         'profile.html', 
         name = info['name'],
@@ -43,7 +50,7 @@ def profile():
         tag = info['tag'],
         bio = info['bio'],
         lst = info['lst'],
-        date = "Placeholder"
+        date = format_date_joined(info['date'])
     )
 
 
