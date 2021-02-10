@@ -26,7 +26,25 @@ def about():
 
 @app.route('/profile')
 def profile():
-    return "Nothing as yet"
+    info = {
+        'name': 'Matthew Palmer',
+        'locate': 'Kingston, Ja',
+        'tag': '@m-apalm',
+        'bio': 'This is a simple paragraph about me. I am a second year Computing student majoring in Computer Science. \
+        I am interesed in alot of things as my interests invlove music, coding , reading and gaining knowledge plus more. \
+        I do not know which area of Computing I would like to focus in so for now I am just trying to get experience in various \
+        aspects of Computing such as Web Development.',
+        'lst': { 'Posts': 7, 'Following': 100, 'Followers': 250 },
+    }
+    return render_template(
+        'profile.html', 
+        name = info['name'],
+        location = info['locate'],
+        tag = info['tag'],
+        bio = info['bio'],
+        lst = info['lst'],
+        date = "Placeholder"
+    )
 
 
 ###

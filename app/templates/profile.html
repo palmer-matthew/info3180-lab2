@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="card">
+    <section>
+        <!-- <img src="" alt="" /> -->
+        <h3>{{ name }}</h3>
+        <p>{{ tag }}</p>
+        <p>{{ location }}</p>
+        <p>{{ date }}</p>
+    </section>
+    <section>
+        <p>{{ bio }}</p>
+        <section>
+            {% for key,value in lst.items() %}
+                <div>
+                    <span>{{ value }}</span>
+                    <span>{{ key }}</span>
+                </div>
+            {% endfor %}
+        </section>
+        <button>Follow</button>
+    </section>
+</section>
+{% endblock %}
