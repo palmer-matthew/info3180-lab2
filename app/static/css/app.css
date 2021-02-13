@@ -5,6 +5,7 @@ body {
 
 .bold{
     font-weight: bold;
+    color: #000;
 }
 
 .card{
@@ -23,8 +24,12 @@ body {
     border-radius: 1% 1% 0 0;
 }
 
+.top h3{
+    color: #fff;
+}
+
 .top img{
-    width: 18%;
+    width: 20vw;
     height: auto;
     border-radius: 50%;
     margin-bottom: 1%;
@@ -37,6 +42,7 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 2%;
+    color: #8c8986;
 }
 
 .follow_line{
@@ -56,7 +62,7 @@ body {
     border: none;
     background-color: #7ed321;
     color: #fff;
-    width: 10%;
+    width: 18vw;
     padding: 5px 0px;
     border-radius: 10%;
     font-weight: bold;
